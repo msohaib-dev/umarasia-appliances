@@ -1,7 +1,7 @@
-import { ProductCard } from "@/components/ui/product-card";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import type { Product } from "@/types";
+import { ProductCard } from "./product-card";
+import { SectionHeading } from "./section-heading";
+import { SectionReveal } from "./section-reveal";
+import type { Product } from "../../types";
 
 type RelatedProductsProps = {
   products: Product[];

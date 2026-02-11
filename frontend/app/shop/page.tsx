@@ -1,10 +1,10 @@
-﻿import { Pagination } from "@/components/ui/pagination";
-import { ProductCard } from "@/components/ui/product-card";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { ShopFilters } from "@/components/ui/shop-filters";
-import { ShopToolbar } from "@/components/ui/shop-toolbar";
-import { getStorefrontCatalog } from "@/lib/server/storefront";
+﻿import { Pagination } from "../../components/ui/pagination";
+import { ProductCard } from "../../components/ui/product-card";
+import { SectionHeading } from "../../components/ui/section-heading";
+import { SectionReveal } from "../../components/ui/section-reveal";
+import { ShopFilters } from "../../components/ui/shop-filters";
+import { ShopToolbar } from "../../components/ui/shop-toolbar";
+import { getStorefrontCatalog } from "../../lib/server/storefront";
 
 export default async function ShopPage() {
   const { products, categories } = await getStorefrontCatalog();

@@ -1,5 +1,5 @@
-import { createContactMessage } from "@/lib/server/data";
-import { errorResponse, fail, okMessage } from "@/lib/server/http";
+import { createContactMessage } from "../../../lib/server/data";
+import { errorResponse, fail, okMessage } from "../../../lib/server/http";
 
 const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 const isValidPakistanPhone = (phone: string) => /^(?:\+92|0)3\d{9}$/.test(phone.replace(/[\s-]/g, ""));

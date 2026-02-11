@@ -1,5 +1,5 @@
-import { errorResponse, ok } from "@/lib/server/http";
-import { getCategories } from "@/lib/server/data";
+import { errorResponse, ok } from "../../../lib/server/http";
+import { getCategories } from "../../../lib/server/data";
 
 export async function GET() {
   try {

@@ -1,5 +1,5 @@
-import { errorResponse, fail, ok } from "@/lib/server/http";
-import { getProductByIdOrSlug } from "@/lib/server/data";
+import { errorResponse, fail, ok } from "../../../../lib/server/http";
+import { getProductByIdOrSlug } from "../../../../lib/server/data";
 
 type Context = {
   params: { id: string };

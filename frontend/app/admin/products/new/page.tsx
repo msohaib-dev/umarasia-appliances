@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AdminProductForm } from "@/components/admin/product-form";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminCategory } from "@/types/admin";
+import { AdminProductForm } from "../../../../components/admin/product-form";
+import { ADMIN_API, adminFetch } from "../../../../lib/admin-api";
+import type { AdminCategory } from "../../../../types/admin";
 
 export default function AdminNewProductPage() {
   const [categories, setCategories] = useState<AdminCategory[]>([]);

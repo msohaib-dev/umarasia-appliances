@@ -2,13 +2,13 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { LoadingSpinner } from "@/components/ui/loading-spinner";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { API_ROUTES } from "@/lib/api";
-import { useCartStore } from "@/lib/store/cart-store";
-import { useToastStore } from "@/lib/store/toast-store";
-import { formatPKR } from "@/lib/utils";
+import { LoadingSpinner } from "../../components/ui/loading-spinner";
+import { SectionHeading } from "../../components/ui/section-heading";
+import { SectionReveal } from "../../components/ui/section-reveal";
+import { API_ROUTES } from "../../lib/api";
+import { useCartStore } from "../../lib/store/cart-store";
+import { useToastStore } from "../../lib/store/toast-store";
+import { formatPKR } from "../../lib/utils";
 
 type CheckoutForm = {
   fullName: string;

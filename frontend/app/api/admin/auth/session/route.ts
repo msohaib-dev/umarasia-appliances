@@ -1,5 +1,5 @@
-import { errorResponse, ok } from "@/lib/server/http";
-import { requireAdmin } from "@/lib/server/admin";
+import { errorResponse, ok } from "../../../../../lib/server/http";
+import { requireAdmin } from "../../../../../lib/server/admin";
 
 export async function GET() {
   try {

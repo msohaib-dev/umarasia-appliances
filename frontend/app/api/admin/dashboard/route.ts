@@ -1,6 +1,6 @@
-import { getAdminStats } from "@/lib/server/data";
-import { requireAdmin } from "@/lib/server/admin";
-import { errorResponse, ok } from "@/lib/server/http";
+import { getAdminStats } from "../../../../lib/server/data";
+import { requireAdmin } from "../../../../lib/server/admin";
+import { errorResponse, ok } from "../../../../lib/server/http";
 
 export async function GET() {
   try {

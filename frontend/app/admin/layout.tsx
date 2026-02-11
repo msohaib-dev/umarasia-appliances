@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { AdminLogoutButton } from "@/components/admin/logout-button";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
+import { AdminLogoutButton } from "../../components/admin/logout-button";
+import { ADMIN_API, adminFetch } from "../../lib/admin-api";
 
 const navItems = [
   { href: "/admin/dashboard", label: "Dashboard" },

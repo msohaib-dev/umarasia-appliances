@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Minus, Plus, Trash2 } from "lucide-react";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { useCartStore } from "@/lib/store/cart-store";
-import { useToastStore } from "@/lib/store/toast-store";
-import { formatPKR } from "@/lib/utils";
+import { SectionHeading } from "../../components/ui/section-heading";
+import { SectionReveal } from "../../components/ui/section-reveal";
+import { useCartStore } from "../../lib/store/cart-store";
+import { useToastStore } from "../../lib/store/toast-store";
+import { formatPKR } from "../../lib/utils";
 
 export default function CartPage() {
   const cartItems = useCartStore((state) => state.items);

@@ -1,5 +1,5 @@
-import { categories as fallbackCategories } from "@/lib/data";
-import type { Category } from "@/types";
+import { categories as fallbackCategories } from "../../lib/data";
+import type { Category } from "../../types";
 
 type ShopFiltersProps = {
   categories?: Category[];

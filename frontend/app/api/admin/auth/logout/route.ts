@@ -1,5 +1,5 @@
-import { errorResponse } from "@/lib/server/http";
-import { requireAdmin } from "@/lib/server/admin";
+import { errorResponse } from "../../../../../lib/server/http";
+import { requireAdmin } from "../../../../../lib/server/admin";
 import { NextResponse } from "next/server";
 
 export async function POST() {

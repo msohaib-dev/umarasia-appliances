@@ -1,6 +1,6 @@
-import { listAdminOrders } from "@/lib/server/data";
-import { requireAdmin } from "@/lib/server/admin";
-import { errorResponse, ok } from "@/lib/server/http";
+import { listAdminOrders } from "../../../../lib/server/data";
+import { requireAdmin } from "../../../../lib/server/admin";
+import { errorResponse, ok } from "../../../../lib/server/http";
 
 export async function GET(request: Request) {
   try {

@@ -1,6 +1,6 @@
-import { signAdminJwt } from "@/lib/server/jwt";
-import { validateAdminCredentials } from "@/lib/server/admin-auth";
-import { errorResponse, fail } from "@/lib/server/http";
+import { signAdminJwt } from "../../../../lib/server/jwt";
+import { validateAdminCredentials } from "../../../../lib/server/admin-auth";
+import { errorResponse, fail } from "../../../../lib/server/http";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {

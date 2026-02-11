@@ -4,11 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, Star, Truck } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import { QuantitySelector } from "@/components/ui/quantity-selector";
-import { useCartStore } from "@/lib/store/cart-store";
-import { useToastStore } from "@/lib/store/toast-store";
-import { formatPKR } from "@/lib/utils";
-import type { Product } from "@/types";
+import { QuantitySelector } from "./quantity-selector";
+import { useCartStore } from "../../lib/store/cart-store";
+import { useToastStore } from "../../lib/store/toast-store";
+import { formatPKR } from "../../lib/utils";
+import type { Product } from "../../types";
 
 type ProductDetailContentProps = {
   product: Product;

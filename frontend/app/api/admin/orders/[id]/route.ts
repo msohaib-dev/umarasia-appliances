@@ -1,6 +1,6 @@
-import { getAdminOrderById } from "@/lib/server/data";
-import { requireAdmin } from "@/lib/server/admin";
-import { errorResponse, fail, ok } from "@/lib/server/http";
+import { getAdminOrderById } from "../../../../../lib/server/data";
+import { requireAdmin } from "../../../../../lib/server/admin";
+import { errorResponse, fail, ok } from "../../../../../lib/server/http";
 
 type Context = {
   params: { id: string };

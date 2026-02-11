@@ -1,5 +1,5 @@
-import { getCategoryBySlug } from "@/lib/server/data";
-import { errorResponse, fail, ok } from "@/lib/server/http";
+import { getCategoryBySlug } from "../../../../lib/server/data";
+import { errorResponse, fail, ok } from "../../../../lib/server/http";
 
 type Context = {
   params: { id: string };

@@ -1,5 +1,5 @@
-﻿import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionReveal } from "@/components/ui/section-reveal";
+﻿import { SectionHeading } from "../../components/ui/section-heading";
+import { SectionReveal } from "../../components/ui/section-reveal";
 
 export default function AboutPage() {
   return (

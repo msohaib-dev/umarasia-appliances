@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "@/lib/api";
+import { API_BASE_URL } from "./api";
 
 export const ADMIN_API = {
   login: `${API_BASE_URL}/api/admin/auth/login`,

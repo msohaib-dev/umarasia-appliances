@@ -1,6 +1,6 @@
-import { requireAdmin } from "@/lib/server/admin";
-import { uploadImageToStorage } from "@/lib/server/data";
-import { errorResponse, fail, okMessage } from "@/lib/server/http";
+import { requireAdmin } from "../../../lib/server/admin";
+import { uploadImageToStorage } from "../../../lib/server/data";
+import { errorResponse, fail, okMessage } from "../../../lib/server/http";
 
 const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 

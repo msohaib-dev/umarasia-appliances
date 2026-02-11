@@ -1,11 +1,11 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { LoadingSpinner } from "@/components/ui/loading-spinner";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { API_ROUTES } from "@/lib/api";
-import { useToastStore } from "@/lib/store/toast-store";
+import { LoadingSpinner } from "../../components/ui/loading-spinner";
+import { SectionHeading } from "../../components/ui/section-heading";
+import { SectionReveal } from "../../components/ui/section-reveal";
+import { API_ROUTES } from "../../lib/api";
+import { useToastStore } from "../../lib/store/toast-store";
 
 type ContactForm = {
   name: string;

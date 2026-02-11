@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { formatPKR } from "@/lib/utils";
+import { SectionReveal } from "../../components/ui/section-reveal";
+import { formatPKR } from "../../lib/utils";
 
 type OrderSummaryItem = {
   name: string;

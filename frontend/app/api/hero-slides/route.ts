@@ -1,5 +1,5 @@
-import { getHeroSlides } from "@/lib/server/data";
-import { errorResponse, ok } from "@/lib/server/http";
+import { getHeroSlides } from "../../../lib/server/data";
+import { errorResponse, ok } from "../../../lib/server/http";
 
 export async function GET() {
   try {

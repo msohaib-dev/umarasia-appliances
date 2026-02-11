@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { Product } from "@/types";
+import type { Product } from "../../types";
 
 export type CartProduct = Pick<Product, "id" | "slug" | "name" | "price" | "images" | "stock">;
 

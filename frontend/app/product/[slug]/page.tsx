@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { ProductDetailContent } from "@/components/ui/product-detail-content";
-import { ProductGallery } from "@/components/ui/product-gallery";
-import { RelatedProducts } from "@/components/ui/related-products";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { getProductBySlug, products as fallbackProducts } from "@/lib/data";
-import { getStorefrontProducts as fetchStorefrontProducts } from "@/lib/server/storefront";
-import type { Product } from "@/types";
+import { Breadcrumbs } from "../../../components/ui/breadcrumbs";
+import { ProductDetailContent } from "../../../components/ui/product-detail-content";
+import { ProductGallery } from "../../../components/ui/product-gallery";
+import { RelatedProducts } from "../../../components/ui/related-products";
+import { SectionReveal } from "../../../components/ui/section-reveal";
+import { getProductBySlug, products as fallbackProducts } from "../../../lib/data";
+import { getStorefrontProducts as fetchStorefrontProducts } from "../../../lib/server/storefront";
+import type { Product } from "../../../types";
 
 type ProductPageProps = {
   params: {

@@ -1,8 +1,8 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminCategory } from "@/types/admin";
+import { ADMIN_API, adminFetch } from "../../../lib/admin-api";
+import type { AdminCategory } from "../../../types/admin";
 
 type CategoryForm = {
   id?: string;

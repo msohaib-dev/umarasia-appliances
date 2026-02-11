@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { AdminProductForm } from "@/components/admin/product-form";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminCategory, AdminProduct } from "@/types/admin";
+import { AdminProductForm } from "../../../../../components/admin/product-form";
+import { ADMIN_API, adminFetch } from "../../../../../lib/admin-api";
+import type { AdminCategory, AdminProduct } from "../../../../../types/admin";
 
 export default function AdminEditProductPage() {
   const params = useParams<{ id: string }>();

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import type { HeroSlide } from "@/types";
+import type { HeroSlide } from "../../types";
 
 type HeroCarouselProps = {
   slides: HeroSlide[];

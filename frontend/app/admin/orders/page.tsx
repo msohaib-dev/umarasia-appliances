@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminOrder } from "@/types/admin";
+import { ADMIN_API, adminFetch } from "../../../lib/admin-api";
+import type { AdminOrder } from "../../../types/admin";
 
 const statuses: AdminOrder["status"][] = ["Pending", "Confirmed", "Shipped", "Delivered", "Cancelled"];
 

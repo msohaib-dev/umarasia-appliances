@@ -1,6 +1,6 @@
-import { createAdminProduct, listAdminProducts } from "@/lib/server/data";
-import { requireAdmin } from "@/lib/server/admin";
-import { errorResponse, ok, okMessage } from "@/lib/server/http";
+import { createAdminProduct, listAdminProducts } from "../../../../lib/server/data";
+import { requireAdmin } from "../../../../lib/server/admin";
+import { errorResponse, ok, okMessage } from "../../../../lib/server/http";
 
 export async function GET() {
   try {

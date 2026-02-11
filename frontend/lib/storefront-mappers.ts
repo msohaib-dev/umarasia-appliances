@@ -1,4 +1,4 @@
-import type { Category, Product } from "@/types";
+import type { Category, Product } from "../types";
 
 type ApiCategory = {
   slug?: string;

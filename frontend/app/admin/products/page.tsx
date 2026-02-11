@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminProduct } from "@/types/admin";
+import { ADMIN_API, adminFetch } from "../../../lib/admin-api";
+import type { AdminProduct } from "../../../types/admin";
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<AdminProduct[]>([]);

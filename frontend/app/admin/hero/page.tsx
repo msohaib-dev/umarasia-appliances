@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminHeroSlide } from "@/types/admin";
+import { ADMIN_API, adminFetch } from "../../../lib/admin-api";
+import type { AdminHeroSlide } from "../../../types/admin";
 
 type SlideForm = {
   title: string;

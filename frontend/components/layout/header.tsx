@@ -5,9 +5,9 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Search, ShoppingCart, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { API_ROUTES } from "@/lib/api";
-import { categories as fallbackCategories } from "@/lib/data";
-import { useCartStore } from "@/lib/store/cart-store";
+import { API_ROUTES } from "../../lib/api";
+import { categories as fallbackCategories } from "../../lib/data";
+import { useCartStore } from "../../lib/store/cart-store";
 
 const navLinks = [
   { label: "Home", href: "/" },

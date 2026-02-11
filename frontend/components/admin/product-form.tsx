@@ -2,8 +2,8 @@
 
 import { FormEvent, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminCategory, AdminProduct } from "@/types/admin";
+import { ADMIN_API, adminFetch } from "../../lib/admin-api";
+import type { AdminCategory, AdminProduct } from "../../types/admin";
 
 type ProductFormProps = {
   categories: AdminCategory[];

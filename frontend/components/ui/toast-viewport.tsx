@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
-import { useToastStore } from "@/lib/store/toast-store";
+import { useToastStore } from "../../lib/store/toast-store";
 
 export function ToastViewport() {
   const { toasts, removeToast } = useToastStore();

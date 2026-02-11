@@ -1,5 +1,5 @@
-import { createOrder } from "@/lib/server/data";
-import { errorResponse, fail } from "@/lib/server/http";
+import { createOrder } from "../../../lib/server/data";
+import { errorResponse, fail } from "../../../lib/server/http";
 import { NextResponse } from "next/server";
 
 const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

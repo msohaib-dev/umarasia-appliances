@@ -3,9 +3,9 @@ import {
   getAdminCategoryById,
   getCategoryBySlug,
   updateAdminCategory
-} from "@/lib/server/data";
-import { requireAdmin } from "@/lib/server/admin";
-import { errorResponse, fail, ok, okMessage } from "@/lib/server/http";
+} from "../../../../../lib/server/data";
+import { requireAdmin } from "../../../../../lib/server/admin";
+import { errorResponse, fail, ok, okMessage } from "../../../../../lib/server/http";
 
 type Context = {
   params: { id: string };

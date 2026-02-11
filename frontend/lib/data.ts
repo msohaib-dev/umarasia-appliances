@@ -1,7 +1,7 @@
-import categoriesData from "@/data/categories.json";
-import heroSlidesData from "@/data/hero-slides.json";
-import productsData from "@/data/products.json";
-import type { CartItem, Category, HeroSlide, Product } from "@/types";
+import categoriesData from "../data/categories.json";
+import heroSlidesData from "../data/hero-slides.json";
+import productsData from "../data/products.json";
+import type { CartItem, Category, HeroSlide, Product } from "../types";
 
 type RawProduct = {
   id?: string;

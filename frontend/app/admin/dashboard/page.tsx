@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ADMIN_API, adminFetch } from "@/lib/admin-api";
-import type { AdminStats } from "@/types/admin";
+import { ADMIN_API, adminFetch } from "../../../lib/admin-api";
+import type { AdminStats } from "../../../types/admin";
 
 const statCards = [
   { key: "productCount", label: "Products" },

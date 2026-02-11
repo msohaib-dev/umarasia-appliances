@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCartStore } from "@/lib/store/cart-store";
-import { useToastStore } from "@/lib/store/toast-store";
-import { formatPKR } from "@/lib/utils";
-import type { Product } from "@/types";
+import { useCartStore } from "../../lib/store/cart-store";
+import { useToastStore } from "../../lib/store/toast-store";
+import { formatPKR } from "../../lib/utils";
+import type { Product } from "../../types";
 
 type ProductCardProps = {
   product: Product;

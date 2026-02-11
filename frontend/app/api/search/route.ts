@@ -1,5 +1,5 @@
-import { errorResponse, ok } from "@/lib/server/http";
-import { searchProductsAndSuggestions } from "@/lib/server/data";
+import { errorResponse, ok } from "../../../lib/server/http";
+import { searchProductsAndSuggestions } from "../../../lib/server/data";
 
 export async function GET(request: Request) {
   try {

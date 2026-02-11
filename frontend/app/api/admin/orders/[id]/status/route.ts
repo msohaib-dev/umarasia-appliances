@@ -1,6 +1,6 @@
-import { requireAdmin } from "@/lib/server/admin";
-import { updateAdminOrderStatus } from "@/lib/server/data";
-import { errorResponse, fail, okMessage } from "@/lib/server/http";
+import { requireAdmin } from "../../../../../../lib/server/admin";
+import { updateAdminOrderStatus } from "../../../../../../lib/server/data";
+import { errorResponse, fail, okMessage } from "../../../../../../lib/server/http";
 
 type Context = {
   params: { id: string };

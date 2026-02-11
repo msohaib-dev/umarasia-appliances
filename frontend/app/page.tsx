@@ -1,14 +1,14 @@
 ﻿import Link from "next/link";
 import { BadgeCheck, Bolt, CircleDollarSign, Cog } from "lucide-react";
-import { CategoryCard } from "@/components/ui/category-card";
-import { HeroCarousel } from "@/components/ui/hero-carousel";
-import { ProductCard } from "@/components/ui/product-card";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { API_ROUTES } from "@/lib/api";
-import { categories as fallbackCategories, heroSlides, products as fallbackProducts } from "@/lib/data";
-import { getStorefrontCatalog } from "@/lib/server/storefront";
-import type { Category, HeroSlide, Product } from "@/types";
+import { CategoryCard } from "../components/ui/category-card";
+import { HeroCarousel } from "../components/ui/hero-carousel";
+import { ProductCard } from "../components/ui/product-card";
+import { SectionHeading } from "../components/ui/section-heading";
+import { SectionReveal } from "../components/ui/section-reveal";
+import { API_ROUTES } from "../lib/api";
+import { categories as fallbackCategories, heroSlides, products as fallbackProducts } from "../lib/data";
+import { getStorefrontCatalog } from "../lib/server/storefront";
+import type { Category, HeroSlide, Product } from "../types";
 
 const trustPoints = [
   {

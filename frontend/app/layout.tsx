@@ -2,10 +2,10 @@
 import { Inter, Manrope } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
-import { PageTransition } from "@/components/layout/page-transition";
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
-import { ToastViewport } from "@/components/ui/toast-viewport";
+import { PageTransition } from "../components/layout/page-transition";
+import { Footer } from "../components/layout/footer";
+import { Header } from "../components/layout/header";
+import { ToastViewport } from "../components/ui/toast-viewport";
 
 const inter = Inter({
   subsets: ["latin"],

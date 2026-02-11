@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { ProductCard } from "@/components/ui/product-card";
-import { SectionReveal } from "@/components/ui/section-reveal";
-import { getCategoryBySlug } from "@/lib/data";
-import { getStorefrontCatalog } from "@/lib/server/storefront";
+import { Breadcrumbs } from "../../../components/ui/breadcrumbs";
+import { ProductCard } from "../../../components/ui/product-card";
+import { SectionReveal } from "../../../components/ui/section-reveal";
+import { getCategoryBySlug } from "../../../lib/data";
+import { getStorefrontCatalog } from "../../../lib/server/storefront";
 
 type CategoryPageProps = {
   params: {
