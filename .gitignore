@@ -41,5 +41,5 @@ backend/uploads/
 backend/*.sqlite
 backend/*.db
 
-# Keep legacy empty folder out of git if still present
-server/
+# Keep only root-level legacy empty folder out of git if still present
+/server/
