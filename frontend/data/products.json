@@ -1,0 +1,261 @@
+[
+  {
+    "slug": "dc-ceiling-fan-56-premium",
+    "name": "DC Ceiling Fan 56\" Premium",
+    "categorySlug": "dc-fans",
+    "price": 23500,
+    "oldPrice": 25900,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 98,
+    "description": "High-efficiency DC ceiling fan designed for Pakistani households with reliable low-voltage performance and smooth airflow.",
+    "images": [
+      "https://images.unsplash.com/photo-1582719478185-4d5f89f35207?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1564540574859-0dfb63985908?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1593642702744-d377ab507dc8?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Sweep Size", "value": "56 inch" },
+      { "label": "Power Draw", "value": "35W to 55W" },
+      { "label": "Input", "value": "12V/24V DC Compatible" },
+      { "label": "Winding", "value": "100% Copper" }
+    ]
+  },
+  {
+    "slug": "dc-pedestal-fan-pro",
+    "name": "DC Pedestal Fan Pro",
+    "categorySlug": "dc-fans",
+    "price": 17800,
+    "oldPrice": 19200,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 89,
+    "description": "Portable DC pedestal fan for homes and shops requiring targeted cooling with inverter-friendly operation.",
+    "images": [
+      "https://images.unsplash.com/photo-1593069567131-53a0614dde1d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1529074963764-98f45c47344b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Height", "value": "Adjustable up to 5.5 ft" },
+      { "label": "Power Draw", "value": "28W to 45W" },
+      { "label": "Speeds", "value": "3 Levels" },
+      { "label": "Blade Material", "value": "Balanced ABS" }
+    ]
+  },
+  {
+    "slug": "solar-water-pump-1hp",
+    "name": "Solar Water Pump 1HP",
+    "categorySlug": "solar-pumps",
+    "price": 68500,
+    "oldPrice": 72000,
+    "inStock": true,
+    "stockText": "Limited Stock",
+    "popularity": 84,
+    "description": "Efficient 1HP solar pump engineered for small farms and domestic water transfer with stable daily output.",
+    "images": [
+      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Motor Power", "value": "1HP" },
+      { "label": "Flow Rate", "value": "Up to 110 L/min" },
+      { "label": "Head", "value": "Max 32m" },
+      { "label": "Body", "value": "Corrosion-resistant casting" }
+    ]
+  },
+  {
+    "slug": "solar-submersible-pump-15hp",
+    "name": "Solar Submersible Pump 1.5HP",
+    "categorySlug": "solar-pumps",
+    "price": 94500,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 79,
+    "description": "Heavy-duty submersible unit for reliable pumping in deep well applications under solar systems.",
+    "images": [
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1574263867128-3fefdf9f5364?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Motor Power", "value": "1.5HP" },
+      { "label": "Depth", "value": "Up to 180ft" },
+      { "label": "Voltage", "value": "DC 72V" },
+      { "label": "Impeller", "value": "Stainless Steel" }
+    ]
+  },
+  {
+    "slug": "copper-winding-motor-2hp",
+    "name": "Copper Winding Motor 2HP",
+    "categorySlug": "motors",
+    "price": 41200,
+    "oldPrice": 43800,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 86,
+    "description": "Workshop-grade motor with original copper winding for stable torque and long operational life.",
+    "images": [
+      "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Rated Power", "value": "2HP" },
+      { "label": "Winding", "value": "Original Copper" },
+      { "label": "Duty Type", "value": "Continuous" },
+      { "label": "Cooling", "value": "External Fan Cooled" }
+    ]
+  },
+  {
+    "slug": "industrial-motor-3hp",
+    "name": "Industrial Motor 3HP",
+    "categorySlug": "motors",
+    "price": 55900,
+    "inStock": false,
+    "stockText": "Out of Stock",
+    "popularity": 73,
+    "description": "High-load industrial motor for machinery operations in workshops and small manufacturing setups.",
+    "images": [
+      "https://images.unsplash.com/photo-1581091870622-2f9f8f07f2d8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Rated Power", "value": "3HP" },
+      { "label": "Phase", "value": "Single / Three Phase Options" },
+      { "label": "Protection", "value": "IP54" },
+      { "label": "Frame", "value": "Cast Iron" }
+    ]
+  },
+  {
+    "slug": "hybrid-energy-control-unit",
+    "name": "Hybrid Energy Control Unit",
+    "categorySlug": "energy-solutions",
+    "price": 26800,
+    "oldPrice": 28900,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 82,
+    "description": "Centralized energy management unit for balancing grid and backup usage in homes and retail shops.",
+    "images": [
+      "https://images.unsplash.com/photo-1584277261846-c6a1672ed979?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Input Range", "value": "110V-260V" },
+      { "label": "Protection", "value": "Overload + Surge" },
+      { "label": "Monitoring", "value": "Digital Display" },
+      { "label": "Application", "value": "Home / Shop" }
+    ]
+  },
+  {
+    "slug": "dc-energy-saver-module",
+    "name": "DC Energy Saver Module",
+    "categorySlug": "energy-solutions",
+    "price": 12400,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 77,
+    "description": "Compact module to optimize DC appliance usage and reduce unnecessary power draw during backup hours.",
+    "images": [
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Output", "value": "Stable DC Regulation" },
+      { "label": "Efficiency", "value": "Up to 94%" },
+      { "label": "Mounting", "value": "Wall / Panel" },
+      { "label": "Warranty", "value": "1 Year" }
+    ]
+  },
+  {
+    "slug": "inverter-ready-fan-series-x",
+    "name": "Inverter-Ready Fan Series X",
+    "categorySlug": "inverter-compatible-series",
+    "price": 21200,
+    "oldPrice": 22600,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 92,
+    "description": "Specially tuned fan series for smooth inverter compatibility with low startup surge and stable operation.",
+    "images": [
+      "https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1529074963764-98f45c47344b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Compatibility", "value": "Most Home Inverters" },
+      { "label": "Power Draw", "value": "30W to 50W" },
+      { "label": "Speed Control", "value": "5 Step" },
+      { "label": "Noise Level", "value": "Low" }
+    ]
+  },
+  {
+    "slug": "inverter-stable-motor-drive",
+    "name": "Inverter Stable Motor Drive",
+    "categorySlug": "inverter-compatible-series",
+    "price": 33400,
+    "inStock": true,
+    "stockText": "Limited Stock",
+    "popularity": 70,
+    "description": "Motor drive unit built for cleaner inverter performance and improved efficiency in mixed supply conditions.",
+    "images": [
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1498049860654-af1a5c566876?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Voltage Range", "value": "110V-260V" },
+      { "label": "Topology", "value": "Pure Sine-optimized" },
+      { "label": "Efficiency", "value": "Up to 93%" },
+      { "label": "Housing", "value": "Metal Chassis" }
+    ]
+  },
+  {
+    "slug": "commercial-wall-fan-heavy-duty",
+    "name": "Commercial Wall Fan Heavy Duty",
+    "categorySlug": "commercial-fans",
+    "price": 28600,
+    "oldPrice": 31200,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 90,
+    "description": "Powerful wall-mounted fan for shops and workshops requiring broad, consistent airflow.",
+    "images": [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1529074963764-98f45c47344b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Blade Size", "value": "24 inch" },
+      { "label": "Motor", "value": "Copper Wound" },
+      { "label": "Mount", "value": "Wall Bracket" },
+      { "label": "Application", "value": "Shop / Workshop" }
+    ]
+  },
+  {
+    "slug": "commercial-pedestal-fan-26",
+    "name": "Commercial Pedestal Fan 26\"",
+    "categorySlug": "commercial-fans",
+    "price": 32400,
+    "inStock": true,
+    "stockText": "In Stock",
+    "popularity": 87,
+    "description": "High-airflow commercial pedestal fan tailored for business floors, waiting areas, and service zones.",
+    "images": [
+      "https://images.unsplash.com/photo-1593069567131-53a0614dde1d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specifications": [
+      { "label": "Size", "value": "26 inch" },
+      { "label": "Speed Levels", "value": "3" },
+      { "label": "Base", "value": "Heavy Stability Base" },
+      { "label": "Warranty", "value": "1 Year" }
+    ]
+  }
+]

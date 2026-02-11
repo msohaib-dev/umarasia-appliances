@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "dc-fans",
+    "title": "DC Fans",
+    "shortDescription": "Low-voltage cooling for uninterrupted comfort.",
+    "description": "Efficient DC fan lineup designed for home use during load-shedding, with stable airflow and low energy draw.",
+    "image": "https://images.unsplash.com/photo-1582719478185-4d5f89f35207?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "slug": "solar-pumps",
+    "title": "Solar Pumps",
+    "shortDescription": "Water movement systems optimized for solar setups.",
+    "description": "Durable pump systems for agriculture and residential usage, engineered for practical solar-powered performance.",
+    "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "slug": "motors",
+    "title": "Motors",
+    "shortDescription": "Copper-wound motors for dependable operation.",
+    "description": "Commercial and workshop motor series with tested winding quality and reliable output under regular duty cycles.",
+    "image": "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "slug": "energy-solutions",
+    "title": "Energy Solutions",
+    "shortDescription": "Smart options for energy savings and backup usage.",
+    "description": "Practical product combinations for homes and shops seeking better control over electricity usage and backup planning.",
+    "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "slug": "inverter-compatible-series",
+    "title": "Inverter-Compatible Series",
+    "shortDescription": "Products tuned for stable inverter performance.",
+    "description": "Appliances tested for inverter compatibility to maintain smooth performance under mixed power conditions.",
+    "image": "https://images.unsplash.com/photo-1584277261846-c6a1672ed979?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "slug": "commercial-fans",
+    "title": "Commercial Fans",
+    "shortDescription": "Heavy-duty airflow for business environments.",
+    "description": "High-capacity fan range suitable for workshops, shops, and business spaces requiring consistent cooling.",
+    "image": "https://images.unsplash.com/photo-1529074963764-98f45c47344b?auto=format&fit=crop&w=900&q=80"
+  }
+]
