@@ -6,8 +6,9 @@ import { ProductCard } from "@/components/ui/product-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import { API_ROUTES } from "@/lib/api";
-import { categories, getPopularProducts, heroSlides } from "@/lib/data";
-import type { HeroSlide } from "@/types";
+import { categories as fallbackCategories, heroSlides, products as fallbackProducts } from "@/lib/data";
+import { getStorefrontCatalog } from "@/lib/server/storefront";
+import type { Category, HeroSlide, Product } from "@/types";
 
 const trustPoints = [
   {
@@ -39,9 +40,21 @@ const getHeroSlides = async (): Promise<HeroSlide[]> => {
   }
 };
 
+const getStorefrontData = async (): Promise<{ categories: Category[]; popularProducts: Product[] }> => {
+  try {
+    const { categories, products } = await getStorefrontCatalog();
+    return { categories, popularProducts: [...products].sort((a, b) => b.popularity - a.popularity).slice(0, 8) };
+  } catch (_error) {
+    return {
+      categories: fallbackCategories,
+      popularProducts: [...fallbackProducts].sort((a, b) => b.popularity - a.popularity).slice(0, 8)
+    };
+  }
+};
+
 export default async function HomePage() {
   const heroSlidesData = await getHeroSlides();
-  const popularProducts = getPopularProducts(8);
+  const { categories, popularProducts } = await getStorefrontData();
 
   return (
     <>
@@ -138,4 +151,6 @@ export default async function HomePage() {
     </>
   );
 }
+
+
 

@@ -9,7 +9,7 @@ export const ADMIN_API = {
   products: `${API_BASE_URL}/api/admin/products`,
   categories: `${API_BASE_URL}/api/admin/categories`,
   orders: `${API_BASE_URL}/api/admin/orders`,
-  uploadImage: `${API_BASE_URL}/api/admin/upload-image`
+  uploadImage: `${API_BASE_URL}/api/upload`
 };
 
 export async function adminFetch<T>(url: string, init?: RequestInit): Promise<T> {

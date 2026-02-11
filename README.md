@@ -1,55 +1,30 @@
-# UmarAsia Appliances — Project Root README
+# UmarAsia Appliances
 
-Yes — core restructuring is done.
+Monorepo with a Next.js App Router storefront and API routes.
 
-Current working structure:
+## Current structure
 
 ```text
 UmarAsia/
-  frontend/   # Next.js + Tailwind app
-  backend/    # Node.js + Express API (store + admin)
-  server/     # old leftover empty folder (safe to remove when unlocked)
+  frontend/   # Next.js App Router (UI + /app/api backend routes)
+  backend/    # Supabase SQL + backend package metadata (Express runtime removed)
+  server/     # legacy folder (not used by runtime)
 ```
 
-## What is completed
+## API runtime
 
-- Frontend and backend are separated into dedicated folders.
-- Backend references updated for shared data path usage with new layout.
-- Deployment docs updated for professional architecture:
-  - Frontend -> Vercel
-  - Backend -> Render/Railway
-  - Database -> Supabase
-  - Domain -> custom domain
-- Frontend build check completed successfully from `frontend`.
+- All backend endpoints now run from `frontend/app/api/*`.
+- No Express server, no `app.listen`, no custom server.
+- Deployment target is Vercel (frontend + API together).
 
-## Local run
-
-From project root:
+## Build
 
 ```powershell
 npm install --prefix frontend
-npm install --prefix backend
-npm run dev --prefix backend
-npm run dev --prefix frontend -- --port 3001
+npm run build --prefix frontend
 ```
 
-## Deployment quick map
-
-- Vercel root directory: `frontend`
-- Render/Railway root directory: `backend`
-- Supabase SQL file: `backend/supabase_schema.sql` (including `SQL 2` section)
-
-## One pending cleanup item
-
-If present, remove old locked folder when no process is using it:
-
-```powershell
-rmdir /s /q server
-```
-
----
-
-Detailed docs:
+## Docs
 
 - `frontend/README.md`
 - `frontend/DEPLOYMENT_CHECKLIST.md`

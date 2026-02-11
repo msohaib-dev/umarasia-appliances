@@ -4,9 +4,11 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionReveal } from "@/components/ui/section-reveal";
 import { ShopFilters } from "@/components/ui/shop-filters";
 import { ShopToolbar } from "@/components/ui/shop-toolbar";
-import { products } from "@/lib/data";
+import { getStorefrontCatalog } from "@/lib/server/storefront";
 
-export default function ShopPage() {
+export default async function ShopPage() {
+  const { products, categories } = await getStorefrontCatalog();
+
   return (
     <section className="section-space">
       <div className="ui-container">
@@ -21,7 +23,7 @@ export default function ShopPage() {
         <div className="grid gap-7 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <SectionReveal>
-              <ShopFilters />
+              <ShopFilters categories={categories} />
             </SectionReveal>
           </div>
 
@@ -47,4 +49,6 @@ export default function ShopPage() {
     </section>
   );
 }
+
+
 

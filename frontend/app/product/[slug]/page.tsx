@@ -4,7 +4,9 @@ import { ProductDetailContent } from "@/components/ui/product-detail-content";
 import { ProductGallery } from "@/components/ui/product-gallery";
 import { RelatedProducts } from "@/components/ui/related-products";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { getProductBySlug, getRelatedProducts } from "@/lib/data";
+import { getProductBySlug, products as fallbackProducts } from "@/lib/data";
+import { getStorefrontProducts as fetchStorefrontProducts } from "@/lib/server/storefront";
+import type { Product } from "@/types";
 
 type ProductPageProps = {
   params: {
@@ -12,14 +14,25 @@ type ProductPageProps = {
   };
 };
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProductBySlug(params.slug);
+const loadStorefrontProducts = async (): Promise<Product[]> => {
+  try {
+    return await fetchStorefrontProducts();
+  } catch (_error) {
+    return fallbackProducts;
+  }
+};
+
+export default async function ProductPage({ params }: ProductPageProps) {
+  const products = await loadStorefrontProducts();
+  const product = products.find((item) => item.slug === params.slug) ?? getProductBySlug(params.slug);
 
   if (!product) {
     notFound();
   }
 
-  const relatedProducts = getRelatedProducts(product, 4);
+  const sameCategory = products.filter((item) => item.categorySlug === product.categorySlug && item.slug !== product.slug);
+  const fallback = products.filter((item) => item.slug !== product.slug && item.categorySlug !== product.categorySlug);
+  const relatedProducts = [...sameCategory, ...fallback].slice(0, 4);
 
   return (
     <>

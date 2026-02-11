@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { ProductCard } from "@/components/ui/product-card";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { getCategoryBySlug, getProductsByCategory } from "@/lib/data";
+import { getCategoryBySlug } from "@/lib/data";
+import { getStorefrontCatalog } from "@/lib/server/storefront";
 
 type CategoryPageProps = {
   params: {
@@ -10,14 +11,15 @@ type CategoryPageProps = {
   };
 };
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = getCategoryBySlug(params.slug);
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { categories, products } = await getStorefrontCatalog();
+  const category = categories.find((item) => item.slug === params.slug) ?? getCategoryBySlug(params.slug);
 
   if (!category) {
     notFound();
   }
 
-  const categoryProducts = getProductsByCategory(category.slug);
+  const categoryProducts = products.filter((item) => item.categorySlug === category.slug);
 
   return (
     <section className="section-space">

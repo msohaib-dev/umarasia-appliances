@@ -1,6 +1,11 @@
-import { categories } from "@/lib/data";
+import { categories as fallbackCategories } from "@/lib/data";
+import type { Category } from "@/types";
 
-export function ShopFilters() {
+type ShopFiltersProps = {
+  categories?: Category[];
+};
+
+export function ShopFilters({ categories = fallbackCategories }: ShopFiltersProps) {
   return (
     <aside className="space-y-7 rounded-[22px] border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,36,64,0.06)]">
       <div>

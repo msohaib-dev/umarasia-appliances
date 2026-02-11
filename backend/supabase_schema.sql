@@ -47,6 +47,16 @@ create table if not exists public.orders (
   created_at timestamptz not null default now()
 );
 
+-- 3.1) contact_messages
+create table if not exists public.contact_messages (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  phone text not null,
+  message text not null,
+  created_at timestamptz not null default now()
+);
+
 -- 4) admins
 create table if not exists public.admins (
   id uuid primary key default gen_random_uuid(),
@@ -61,6 +71,7 @@ create index if not exists idx_products_slug on public.products(slug);
 create index if not exists idx_products_category_id on public.products(category_id);
 create index if not exists idx_orders_status on public.orders(status);
 create index if not exists idx_orders_created_at on public.orders(created_at desc);
+create index if not exists idx_contact_messages_created_at on public.contact_messages(created_at desc);
 
 -- updated_at trigger helper
 create or replace function public.set_updated_at()
@@ -89,6 +100,7 @@ execute function public.set_updated_at();
 alter table public.categories enable row level security;
 alter table public.products enable row level security;
 alter table public.orders enable row level security;
+alter table public.contact_messages enable row level security;
 alter table public.admins enable row level security;
 
 -- clear existing policies safely
@@ -101,6 +113,9 @@ drop policy if exists products_modify_admin on public.products;
 drop policy if exists orders_insert_public on public.orders;
 drop policy if exists orders_read_admin on public.orders;
 drop policy if exists orders_update_admin on public.orders;
+
+drop policy if exists contact_messages_insert_public on public.contact_messages;
+drop policy if exists contact_messages_read_admin on public.contact_messages;
 
 drop policy if exists admins_all_admin_only on public.admins;
 
@@ -151,6 +166,19 @@ for update
 to authenticated
 using (auth.role() = 'authenticated')
 with check (auth.role() = 'authenticated');
+
+-- contact messages
+create policy contact_messages_insert_public
+on public.contact_messages
+for insert
+to public
+with check (true);
+
+create policy contact_messages_read_admin
+on public.contact_messages
+for select
+to authenticated
+using (auth.role() = 'authenticated');
 
 -- admins (no public access)
 create policy admins_all_admin_only
@@ -232,4 +260,5 @@ from (
     )
 ) as v(title, subtitle, image, sort_order, is_active)
 where not exists (select 1 from public.hero_slides limit 1);
+
 

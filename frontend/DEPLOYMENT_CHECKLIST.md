@@ -1,58 +1,32 @@
-# UmarAsia Production Deployment Checklist
+# UmarAsia Production Deployment Checklist (Vercel Only)
 
-## 1) Frontend (Vercel)
+## 1) Vercel Project (frontend)
 
 Set in Vercel Project Settings -> Environment Variables:
 
-- `NEXT_PUBLIC_API_BASE_URL=https://your-backend-domain.com`
-
-Build/Runtime:
-
-- Framework: Next.js
-- Build command: `npm run build`
-- Start command: `npm run start`
-
-## 2) Backend (Render/Railway)
-
-Set environment variables:
-
-- `NODE_ENV=production`
-- `PORT=5000` (or platform-provided)
-- `PUBLIC_API_BASE_URL=https://your-backend-domain.com`
-- `CORS_ORIGIN=https://your-frontend-domain.vercel.app`
+- `SUPABASE_URL=<your-supabase-url>`
+- `SUPABASE_SERVICE_ROLE_KEY=<service-role-key>`
 - `JWT_SECRET=<strong-random-secret>`
 - `IMAGE_TOKEN_SECRET=<strong-random-secret>`
 - `ADMIN_EMAIL=<admin-email>`
 - `ADMIN_PASSWORD=<strong-admin-password>`
-- `SUPABASE_URL=<your-supabase-url>`
-- `SUPABASE_SERVICE_ROLE_KEY=<service-role-key>`
-- `USE_DUMMY_DATA=false`
-- `RATE_LIMIT_WINDOW_MS=900000`
-- `RATE_LIMIT_MAX=300`
-- `AUTH_RATE_LIMIT_WINDOW_MS=900000`
-- `AUTH_RATE_LIMIT_MAX=20`
+- `SUPABASE_STORAGE_BUCKET=<bucket-name>` (optional, defaults to `product-images`)
+- `NEXT_PUBLIC_API_BASE_URL=` (optional, keep empty for same-origin API)
 
-Render suggested service settings:
+Build/Runtime:
 
-- Root Directory: `backend`
-- Build Command: `npm install`
-- Start Command: `node app.js`
+- Framework: Next.js
+- Root Directory: `frontend`
+- Build command: `npm run build`
+- Start command: `npm run start`
 
-Notes:
-
-- In production, app enforces HTTPS and strict CORS allowlist.
-- In production, dummy mode is disabled by code path.
-- If Supabase keys are missing in production, backend fails fast.
-
-## 3) Supabase
+## 2) Supabase
 
 - Run `backend/supabase_schema.sql` in SQL editor.
-- Confirm tables exist: `categories`, `products`, `orders`, `admins`.
-- Confirm RLS and policies are enabled.
+- Ensure tables exist and policies are applied.
+- Ensure storage bucket exists for uploads.
 
-Also run `SQL 2` section in same file for `hero_slides`.
-
-## 4) End-to-end QA flow (must pass)
+## 3) End-to-end QA flow (must pass)
 
 ### Admin
 
@@ -76,4 +50,4 @@ Also run `SQL 2` section in same file for `hero_slides`.
 1. No 404 for implemented routes.
 2. No CORS errors in browser console.
 3. No unhandled promise rejections.
-4. Protected image routes respond with no-store headers.
+4. `/api/admin/*` routes reject unauthorized requests.

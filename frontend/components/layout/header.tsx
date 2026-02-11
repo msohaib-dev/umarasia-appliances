@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Search, ShoppingCart, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { API_ROUTES } from "@/lib/api";
-import { categories } from "@/lib/data";
+import { categories as fallbackCategories } from "@/lib/data";
 import { useCartStore } from "@/lib/store/cart-store";
 
 const navLinks = [
@@ -37,6 +37,7 @@ export function Header() {
   const [categoryMatches, setCategoryMatches] = useState<SearchCategory[]>([]);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchLoading, setSearchLoading] = useState(false);
+  const [navCategories, setNavCategories] = useState(fallbackCategories);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const searchBoxRef = useRef<HTMLDivElement | null>(null);
 
@@ -58,6 +59,41 @@ export function Header() {
       setSolutionsOpen(false);
     }, 150);
   };
+
+  useEffect(() => {
+    const loadCategories = async () => {
+      try {
+        const response = await fetch(API_ROUTES.categories);
+        if (!response.ok) return;
+
+        const payload = await response.json();
+        const data = Array.isArray(payload?.data) ? payload.data : [];
+        if (!data.length) return;
+
+        const mapped = data
+          .map((item: { slug?: string; name?: string; title?: string }) => ({
+            slug: String(item?.slug || "").trim(),
+            title: String(item?.name || item?.title || "").trim()
+          }))
+          .filter((item: { slug: string; title: string }) => item.slug && item.title)
+          .map((item: { slug: string; title: string }) => ({
+            slug: item.slug,
+            title: item.title,
+            shortDescription: "",
+            description: "",
+            image: ""
+          }));
+
+        if (mapped.length > 0) {
+          setNavCategories(mapped);
+        }
+      } catch {
+        // keep fallback categories
+      }
+    };
+
+    loadCategories();
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setIsSticky(window.scrollY > 8);
@@ -221,7 +257,7 @@ export function Header() {
                   transition={{ duration: 0.2, ease: "easeOut" }}
                   className="absolute left-0 top-full w-72 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2.5 shadow-[0_18px_42px_rgba(15,36,64,0.14)]"
                 >
-                  {categories.map((category) => (
+                  {navCategories.map((category) => (
                     <Link
                       key={category.slug}
                       href={`/category/${category.slug}`}
@@ -283,7 +319,7 @@ export function Header() {
             </button>
             {solutionsOpen ? (
               <div className="ml-3 grid gap-1 border-l border-slate-200 pl-3">
-                {categories.map((category) => (
+                {navCategories.map((category) => (
                   <Link key={category.slug} href={`/category/${category.slug}`} className="py-1 text-sm text-slate-600">
                     {category.title}
                   </Link>
@@ -304,4 +340,5 @@ export function Header() {
     </header>
   );
 }
+
 
